@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import web from "../src/images/homebg.png";
+// import web from "../src/images/homebg.png";
 
 const Common = (props) => {
     return (
@@ -15,7 +15,7 @@ const Common = (props) => {
                             <strong className="brand-name">Falcon IT</strong>
                         </h1>
                         <h2 className="my-3">
-                            we are the Mern Team making Websites
+                            We are the Mern Team making Websites.
                         </h2>
                         <div className="mt-3">
                             <NavLink to={props.visit} className="btn-get-started">
