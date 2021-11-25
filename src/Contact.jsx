@@ -16,36 +16,33 @@ class Contact extends Component {
         errors: {}
     };
     schema = {
-        fullname: Joi.string().required(),
-        username: Joi.string().required(),
-        phone: Joi.string().required(),
-        email: Joi.string().email().required(),
-        password: Joi.string().min(6).max(10).required(),
-        message: Joi.string().required()
+        fullname: Joi.string().required().label('Fullname'),
+        username: Joi.string().required().label('Username'),
+        phone: Joi.string().required().label('Phone'),
+        email: Joi.string().email().required().label('Email'),
+        password: Joi.string().min(6).max(10).required().label('Password'),
+        message: Joi.string().required().label('Message')
     }
+    
     validate = () => {
-        const result = Joi.validate(this.state.data, this.schema, {abortEarly: false});
-        console.log(result);
-        if(!result.error) return null;
+        const {error} = Joi.validate(this.state.data, this.schema, {abortEarly: false});
+        if(!error) return null;
 
         const errors = {};
-        for(let error of result.error.details)
-        {
-            const key = error.path[0];
-            const value =error.message;
-            errors[key] = value;
-        }
+        for (let item of error.details)
+        errors[item.path[0]] = item.message;
         return errors;
     }
 
      handleSubmit = (e) => {
         e.preventDefault();
         const errors = this.validate();
-
         this.setState({errors:errors || {} });
         if(errors) return;
 
-        console.log("form submitted");
+        alert(
+                            `Hey ${this.state.data.fullname}! Welcome to Falcon IT. You are now a member of MERN Team.
+                            Press "Ok" to continue. `);
     }
 
      handleChange=(e) => {
@@ -58,6 +55,11 @@ class Contact extends Component {
         return (
            
             <div className="container contact_div">
+            <div>
+                <h1 className="my-3">
+                <h1 className="text-center">Contact Us</h1>
+                </h1>
+            </div>
                 <div className="row">
                     <div className="col-md-6 col-10 mx-auto">   
                         <form on onSubmit={this.handleSubmit}>
@@ -105,8 +107,9 @@ class Contact extends Component {
                             </div>
 
                             
-
+                        <div class="col-12">
                             <button type="submit" className="btn btn-primary">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
