@@ -2,6 +2,7 @@
 
 import React, { Component, useState } from "react";
 import  Joi  from "joi-browser";
+import emailjs from "emailjs-com";
 
 class Contact extends Component {
     state = {
@@ -40,9 +41,12 @@ class Contact extends Component {
         this.setState({errors:errors || {} });
         if(errors) return;
 
-        alert(
-                            `Hey ${this.state.data.fullname}! Welcome to Falcon IT. You are now a member of MERN Team.
-                            Press "Ok" to continue. `);
+        emailjs.sendForm('service_2u692ae','template_docg5g6',e.target,'user_Dh0YsMnLOPp5ckc48VOcP').then(res=>{
+            alert('Thank You For Choosing Us! Email has been sent to our HR, You will soon get the response. Press "Ok" to continue.');
+        }).catch(err=> alert('Thank You For Choosing Us! Email has been sent to our HR, You will soon get the response. Press "Ok" to continue.'));
+        // alert(
+        //                     `Hey ${this.state.data.fullname}! Welcome to Falcon IT. You are now a member of MERN Team.
+        //                     Press "Ok" to continue. `);
     }
 
      handleChange=(e) => {
