@@ -5,7 +5,7 @@ const Footer = () => {
         <>
         <footer className="bg-light mt-4 text-center">
             <p>
-                © 2021 Falcon IT | All Rights Reserved | Terms & Conditions.
+                © {new Date().getFullYear()} Falcon IT | All Rights Reserved | Terms & Conditions.
             </p>
         </footer>
         </>
