@@ -1,5 +1,5 @@
 
-import rect from "../src/images/react.png";
+import react from "../src/images/react.png";
 import native from "../src/images/native.jpg";
 import net from "../src/images/neet.png";
 import angular from "../src/images/angularr.png";
@@ -8,7 +8,7 @@ import sap from "../src/images/sap.svg";
 
 const Sdata = [
     {
-        imgsrc: rect,
+        imgsrc: react,
         title: "React Development",
     },
     {
