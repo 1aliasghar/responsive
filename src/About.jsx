@@ -10,7 +10,7 @@ const About = () => {
        name="Welcome to About Page " 
        imgsrc={web} 
        visit="/contact" 
-       btname="Contact Now" 
+       btname="Contact Me" 
 
        />
         </>
