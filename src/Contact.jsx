@@ -69,42 +69,42 @@ class Contact extends Component {
                         <form on onSubmit={this.handleSubmit}>
 
                             <div className="form-group">
-                                <label htmlFor="fullname">fullname</label>
+                                <label htmlFor="fullname">Fullname</label>
                                 <input type="text" className="form-control" name="fullname" id="fullname" placeholder="Enter Your fullname"
                                 value={this.state.data.fullname} onChange={this.handleChange}/>
                                 {this.state.errors.fullname && <div className="alert alert-danger">{this.state.errors.fullname}</div>}
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="username">username</label>
+                                <label htmlFor="username">Username</label>
                                 <input type="text" className="form-control" name="username" id="username" placeholder="enter a Unique username"
                                 value={this.state.data.username} onChange={this.handleChange}/>
                                 {this.state.errors.username && <div className="alert alert-danger">{this.state.errors.username}</div>}
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="phone">phone</label>
+                                <label htmlFor="phone">Phone</label>
                                 <input type="text" className="form-control" name="phone" id="phone" placeholder="03*********"
                                 value={this.state.data.phone} onChange={this.handleChange}/>
                                 {this.state.errors.phone && <div className="alert alert-danger">{this.state.errors.phone}</div>}
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="email">email</label>
+                                <label htmlFor="email">Email</label>
                                 <input type="text" className="form-control" name="email" id="email" placeholder="xyz@gmail.com"
                                 value={this.state.data.email} onChange={this.handleChange}/>
                                 {this.state.errors.email && <div className="alert alert-danger">{this.state.errors.email}</div>}
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="password">password</label>
+                                <label htmlFor="password">Password</label>
                                 <input type="password" className="form-control" name="password" id="password" placeholder="At least 8 characters"
                                 value={this.state.data.password} onChange={this.handleChange}/>
                                 {this.state.errors.password && <div className="alert alert-danger">{this.state.errors.password}</div>}
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="message">message</label>
+                                <label htmlFor="message">Message</label>
                                 <textarea className="form-control" name="message" id="message" rows="3" placeholder="Give your Feedback"
                                 value={this.state.data.message} onChange={this.handleChange}></textarea>
                                 {this.state.errors.message && <div className="alert alert-danger">{this.state.errors.message}</div>}
