@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
         <Common 
-        name="Grow Your Business with " 
+        name="Excel Your Business with " 
         imgsrc={web} 
         visit="/service" 
         btname="Get Started" 
